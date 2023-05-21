@@ -26,17 +26,21 @@ import json
 
 #################################### python 環境 /////////
 
+import os #GIT 
+
+
+
 
 #建立application物件
 app = Flask(__name__)
 
 #放入自己的LINEBOTChanel AccessToken
 #line_bot_api = LineBotApi("CHANNEL_ACCESS_TOKEN" )
-line_bot_api = LineBotApi("S2b3Gs/ThNvATsC8wLD/k8Gh+fDmLqwwXsIMoUgKcB8fipzb+I/Uasnj3L5K9m58g5kCQvNSeWEXU1NZWEEV44tmhe1vAj5Dl5Tn83g2gOLXKpv6h5PtWgU+J5bjGwUW7vR2HmXK8xll/xJ9EcqbPAdB04t89/1O/w1cDnyilFU=" )
+line_bot_api = LineBotApi("CHANNEL_AVVESS_TOKEN" )
 
 #放入自己的LINEBTCelSecret
 #handler = WebhookHandler("CHANNEL_SECRET" )
-handler = WebhookHandler("b9ec8063810d87c112557bfcf5007455" )
+handler = WebhookHandler("CHANNEL_ACCESS_SECRET" )
 
 
 #Webhook 入口  ，監聽所有來自/calbackstRqs
