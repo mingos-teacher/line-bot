@@ -36,11 +36,11 @@ app = Flask(__name__)
 
 #放入自己的LINEBOTChanel AccessToken
 #line_bot_api = LineBotApi("CHANNEL_ACCESS_TOKEN" )
-line_bot_api = LineBotApi("CHANNEL_AVVESS_TOKEN" )
+line_bot_api = LineBotApi(os.getenv("CHANNEL_AVVESS_TOKEN"))
 
 #放入自己的LINEBTCelSecret
 #handler = WebhookHandler("CHANNEL_SECRET" )
-handler = WebhookHandler("CHANNEL_ACCESS_SECRET" )
+handler = WebhookHandler(os.getenv("CHANNEL_ACCESS_SECRET" ))
 
 
 #Webhook 入口  ，監聽所有來自/calbackstRqs
@@ -83,4 +83,7 @@ def handle_message(event):
 # 主程式 MAIN
 if __name__ == "__main__":  # 用來判斷是否為該檔案的主程式
     # 啟用服務
-    app.run(port=2023)
+    #app.run(port=2023)
+    Port=int(os.environ.get(‘PORT’,2023))
+    App.run(‘0.0.0.0’,port=port)
+
