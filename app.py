@@ -84,6 +84,5 @@ def handle_message(event):
 if __name__ == "__main__":  # 用來判斷是否為該檔案的主程式
     # 啟用服務
     #app.run(port=2023)
-    Port=int(os.environ.get(‘PORT’,2023))
-    App.run(‘0.0.0.0’,port=port)
+    App.run(‘0.0.0.0’,port=3000)
 
